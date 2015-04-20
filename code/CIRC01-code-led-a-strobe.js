@@ -1,11 +1,11 @@
 var five = require("johnny-five");
 var myBoard, myLed;
 
-myBoard = new five.Board();
+myBoard = new five.Board({ port: "/dev/ttyS0"});
 
 myBoard.on("ready", function() {
 
-  myLed = new five.Led(13)
+  myLed = new five.Led(4)
 
   myLed.strobe( 1000 );
 
