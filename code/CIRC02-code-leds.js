@@ -1,5 +1,5 @@
 var five = require("johnny-five");
-var board = new five.Board();
+var board = new five.Board({ port: "/dev/ttyS0"});
 
 board.on("ready", function() {
   var ledPins = [2,3,4,5,6,7,8,9];
